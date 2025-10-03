@@ -1,0 +1,345 @@
+/* rcs globals en la parte superior class en medio, especiales al pricipio y otros al final */
+
+/* parte superior */
+
+body {
+    background-color: rgb(66, 186, 190);
+  color: rgb(0, 0, 0);
+  transition: all 3s ease;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  margin: 0;
+  place-items: center;
+  display: grid;
+  height: 100vh;
+  text-align: center;
+  box-sizing: border-box;
+}
+body.dark-mode {
+  background-color: rgb(60, 60, 60);
+  color: rgb(199, 199, 199);
+}
+#nav {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+}
+button {
+  background-color: rgb(30, 144, 255);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.8s ease, transform 0.2s ease;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+
+}
+button:hover {
+  background-color: rgb(255, 38, 0);
+  transform: scale(1.05);
+}
+body.dark-mode button {
+  background-color: rgb(51, 51, 51);
+  color: rgba(245, 245, 245, 11);
+}
+body.dark-mode button:hover {
+  background-color: rgb(85, 85, 85);
+}
+
+body.dark-mode header, body.dark-mode footer{
+  background-color: rgba(255, 255, 255, 0.288);
+}
+
+/* fin de parte superior */
+
+/* parte de class */
+
+.p01 {
+  color: rgba(99, 99, 99, 1);
+}
+.a01 {
+  text-decoration: none;
+  color: rgb(255, 38, 0);
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+.a01:hover {
+  color: rgb(0, 255, 213);
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+
+}
+.a02 {
+  text-decoration: none;
+  color: rgb(0, 26, 255);
+  font-weight: bold;
+  transition: color 0.2s ease;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background-color: rgba(59, 58, 58, 0.418);
+
+}
+.a02:hover {
+  color: rgb(255, 0, 0);
+  background-color: rgba(0, 238, 255, 0.733);
+}
+.logo {
+  width: 50px;
+  height: auto;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+.contact-form label {
+  font-weight: bold;
+}
+.bf {
+  background-color: rgb(30, 144, 255);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.8s ease, transform 0.2s ease;
+  margin-right: 10px;
+
+}
+.bf:hover {
+  background-color: rgb(255, 38, 0);
+  transform: scale(1.05);
+}
+.caja01 {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+
+}
+.apr {
+  text-decoration: none;
+  color: rgb(0, 26, 255);
+  font-weight: bold;
+  transition: color 0.2s ease;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background-color: rgba(59, 58, 58, 0.418);
+
+}
+.apr:hover {
+  color: rgb(255, 0, 0);
+  background-color: rgba(0, 238, 255, 0.733);
+}
+
+/* fin de parte de class */
+
+/* parte de especiales */
+
+.menu {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    background-color: rgba(0, 255, 106, 0.548);
+    border-radius: 8px;
+    transition: background-color 0.8s ease;
+    width: 70%;
+    height: auto;
+}
+
+.submenu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: none;
+    position: absolute;
+    
+}
+.menu-desplegable {
+    position: relative;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.8s ease;
+}
+.menu-desplegable:hover .submenu {
+    display: block !important;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.8s ease;
+}
+
+#img001 {
+  width: 500px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#h2 {
+  font-size: 48px;
+  margin-bottom: 5px;
+  background-color: rgb(186, 28, 235);
+}
+#plog {
+  font-size: 15px;
+  margin-top: 0;
+  padding: 0 20px;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  transition: background-color 0.8s ease;
+  width: 70%;
+  height: auto;
+
+}
+
+#icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+h1 {
+  display: inline;
+  font-size: 2em;
+  vertical-align: middle;
+}
+footer {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  margin-top: 20px;
+  border-radius: 8px;
+  transition: background-color 0.8s ease;
+  width: 70%;
+  height: auto;
+}
+
+
+/* fin de parte de especiales */
+body.dark-mode .bf {
+  background-color: rgb(51, 51, 51);
+  color: rgb(245, 245, 245, 11);
+}
+body.dark-mode .bf:hover {
+  background-color: rgb(85, 85, 85);
+}
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  resize: vertical;
+}
+input[type="text"], input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+input[type="submit"], input[type="reset"] {
+  background-color: rgb(30, 144, 255);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.8s ease, transform 0.2s ease;
+  margin-right: 10px;
+
+}
+input[type="submit"]:hover, input[type="reset"]:hover {
+  background-color: rgb(255, 38, 0);
+  transform: scale(1.05);
+}
+body.dark-mode input[type="submit"], body.dark-mode input[type="reset"] {
+  background-color: rgb(51, 51, 51);
+  color: rgb(245, 245, 245, 11);
+}
+body.dark-mode input[type="submit"]:hover, body.dark-mode input[type="reset"]:hover {
+  background-color: rgb(85, 85, 85);
+}
+@media (max-width: 600px) {
+  #img001 {
+    width: 100%;
+  }
+  
+  .contact-form {
+    padding: 15px;
+  }
+}
+@media (max-width: 400px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media (max-width: 400px) {
+  button {
+    padding: 8px 16px;
+    bottom: 10px;
+    right: 10px;
+  }
+}
+@media (max-width: 400px) {
+  #h2 {
+    font-size: 36px;
+  }
+  #plog {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+}
+@media (max-width: 400px) {
+  .contact-form {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+@media (max-width: 400px) {
+  input[type="text"], input[type="email"], textarea {
+    font-size: 14px;
+  }
+}
+@media (max-width: 400px) {
+  input[type="submit"], input[type="reset"] {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+footer {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  transition: background-color 0.8s ease;
+  text-align: center;
+  font-size: 18px;
+}
+body.dark-mode footer {
+  background-color: rgba(255, 255, 255, 0.288);
+  color: rgb(220, 220, 220);
+}
