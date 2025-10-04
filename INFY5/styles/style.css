@@ -1,0 +1,196 @@
+body {
+    font-family: Arial, sans-serif;
+    /* Elimina 'display: flex', 'align-items', 'justify-content' del body si ya no lo usas para centrar todo el contenido */
+    /* Mantén 'min-height: 100vh', 'margin: 0', 'background-color' */
+    min-height: 100vh;
+    margin: 0;
+    background-color: #ffffff;
+    text-align: center; /* Centra el h1 y cualquier contenido a nivel de bloque si no están dentro de un flexbox */
+    padding: 20px; /* Añade un poco de padding general para que el contenido no toque los bordes */
+    box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */ 
+}
+h1 {
+    margin-bottom: 30px;
+    color: #333;
+    }
+#es {
+    font-family: Arial;
+    color: rgb(255, 60, 0);
+    font-size: 15px;
+    }
+input::placeholder {
+    color: #00a2ff;
+    opacity: 1; /* Asegura que el color del placeholder sea completamente visible */
+
+}
+#contenerdor-de-busc {
+    display: flex; /* Para que el input y el botón estén en línea */
+    justify-content: center; /* **Centra el contenido horizontalmente dentro del contenedor** */
+    align-items: center; /* Alinea verticalmente si los elementos tienen diferentes alturas */
+    margin: 0 auto 20px auto; /* Centra el contenedor horizontalmente en la página y añade margen inferior */
+    max-width: 600px; /* Limita el ancho máximo para pantallas grandes */
+    width: 90%; /* Hace que el contenedor sea flexible en pantallas pequeñas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden; 
+}
+#buscar-entrada {
+    padding: 12px 18px; /* Aumentamos un poco el padding para mejor tacto */
+    border: none;
+    outline: none;
+    font-size: 16px;
+    flex-grow: 1; /* Permite que el input ocupe el espacio disponible */
+    min-width: 150px; /* Asegura que el input no se vuelva demasiado pequeño */
+    
+}
+#buscar-but {
+    background-color: #ff0000;
+    color: rgb(255, 0, 0);
+    border: none;
+    padding: 12px 18px; /* Coincide con el padding del input */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.1s ease;
+    flex-shrink: 0; /* Evita que el botón se encoja */
+}
+#buscar-but:hover {
+    background-color: #0057b3b0;
+}
+#items-de-la-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto; /* Centra la lista */
+    width: 90%; /* Hace que la lista sea flexible */
+    max-width: 600px; /* Limita el ancho máximo de la lista */
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+#items-de-la-lista li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+    text-align: left; /* Alinea el texto de los ítems a la izquierda */
+}
+#items-de-la-lista li:last-child {
+    border-bottom: none;
+}
+#items-de-la-lista li.hide {
+    display: none;
+}
+/* Media Queries para una mejor adaptación en pantallas muy pequeñas */
+@media (max-width: 480px) {}
+/* ... (tu CSS existente para body, h1, etc.) ... */
+#contenerdor-de-busc {
+    display: flex; /* ¡ESENCIAL! Esto hace que los hijos se coloquen en fila */
+    align-items: center; /* Centra los elementos verticalmente dentro del contenedor flex */
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    width: 90%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+#buscar-entrada {
+    flex-grow: 1; /* Permite que el input ocupe todo el espacio disponible */
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    /* Asegúrate de que no haya un 'width: 100%;' aquí, ya que flex-grow lo maneja */
+}
+#buscar-but {
+    background-color: rgb(5, 105, 5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.5s ease;
+    flex-shrink: 0; /* Evita que el botón se encoja si el espacio es limitado */
+    /* No es necesario un 'width' aquí, el padding define su tamaño */
+}
+/* ... (el resto de tu CSS para #items-de-la-lista, media queries, etc.) ... */
+#items-de-la-lista li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+#items-de-la-lista li:hover {
+    background-color: #f5f5f5;
+}
+.item-thumbnail {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    margin-left: 10px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+/* Estilos para el contenedor de las pestañas */
+.filter-tabs {
+    display: flex;
+    justify-content: center; /* Centra las pestañas horizontalmente */
+    gap: 10px; /* Espacio entre los botones */
+    margin-top: 10px; /* Acercar a la barra de búsqueda */
+    margin-bottom: 20px; /* Espacio debajo de las pestañas */
+    flex-wrap: wrap; /* Permite que las pestañas se envuelvan en pantallas pequeñas */
+    width: 90%; /* Ajusta al ancho de la barra de búsqueda */
+    max-width: 500px;
+    margin: 0 auto;
+
+}
+/* Estilos para los botones individuales de las pestañas */
+.filter-btn {
+    background-color: rgb(0,255,00); /* Color de fondo suave */
+    color: #000000; /* Color de texto */
+    border: 1px solid #ffffff; /* Borde sutil */
+    padding: 8px 15px;
+    border-radius: 20px; /* Bordes redondeados para un aspecto de "píldora" */
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.6s ease;
+    outline: none; /* Quita el contorno al hacer clic */
+    
+}
+.filter-btn:hover {
+    background-color:  rgb(0, 0, 0); /* Ligeramente más oscuro al pasar el ratón */
+    color: rgb(255, 255, 255);
+}
+/* Estilo para la pestaña activa/seleccionada */
+.filter-btn.active {
+    background-color: black; /* Color primario */
+    color: white;
+    border-color: #0004ff;
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2); /* Sombra para destacarla */
+}
+/* ... (El resto de tu CSS para #items-de-la-lista, .item-thumbnail, media queries) ... */
+.audio-player-container {
+    margin-top: 20px;
+    width: 90%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(24, 24, 24);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#playlist-container {
+    margin-top: 20px;
+    width: 90%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
