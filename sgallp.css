@@ -140,13 +140,14 @@ nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    padding: 0;
-    margin: 0 0 20px 0;
-    background-color: rgba(0, 255, 106, 0.548);
+    padding:0;
+    margin: 0 0 10px 40px;
+    background-color: rgb(0, 225, 255);
     border-radius: 8px;
     transition: background-color 0.8s ease;
     width: 70%;
     height: auto;
+
 }
 
 .submenu {
@@ -155,7 +156,10 @@ nav ul {
     list-style: none;
     display: none;
     position: absolute;
-    
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 16px rgba(3, 3, 3, 0.233);
+    border-radius: 8px;
+    transition: background-color 0.8s ease;
 }
 .menu-desplegable {
     position: relative;
@@ -166,6 +170,9 @@ nav ul {
     border-radius: 8px;
     transition: background-color 0.8s ease;
 }
+.menu-desplegable:hover {
+    background-color: rgba(0, 255, 106, 0.748);
+}
 .menu-desplegable:hover .submenu {
     display: block !important;
     background-color: rgba(0, 0, 0, 0.1);
@@ -173,7 +180,20 @@ nav ul {
     border-radius: 8px;
     transition: background-color 0.8s ease;
 }
-
+.submenu li {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+.submenu li:hover {
+    background-color: rgb(5, 134, 209);
+    color: rgb(255, 255, 255);
+}
+h4 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
 #img001 {
   width: 500px;
   height: auto;
@@ -200,6 +220,9 @@ header {
   transition: background-color 0.8s ease;
   width: 70%;
   height: auto;
+  align-items: center;
+  justify-content: center;
+
 
 }
 
@@ -244,6 +267,11 @@ body.dark-mode #search {
   background-color: rgb(51, 51, 51);
   color: rgb(245, 245, 245, 11);
   border: 1px solid rgb(85, 85, 85);
+}
+body.dark-mode #search:focus {
+  background-color: rgb(85, 85, 85);
+  color: rgb(0, 255, 242);
+  border: 2px solid rgb(25, 0, 255);
 }
 
 /* fin de parte de especiales */
@@ -293,54 +321,6 @@ body.dark-mode input[type="submit"], body.dark-mode input[type="reset"] {
 body.dark-mode input[type="submit"]:hover, body.dark-mode input[type="reset"]:hover {
   background-color: rgb(85, 85, 85);
 }
-@media (max-width: 600px) {
-  #img001 {
-    width: 100%;
-  }
-  
-  .contact-form {
-    padding: 15px;
-  }
-}
-@media (max-width: 400px) {
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-@media (max-width: 400px) {
-  button {
-    padding: 8px 16px;
-    bottom: 10px;
-    right: 10px;
-  }
-}
-@media (max-width: 400px) {
-  #h2 {
-    font-size: 36px;
-  }
-  #plog {
-    font-size: 14px;
-    padding: 0 10px;
-  }
-}
-@media (max-width: 400px) {
-  .contact-form {
-    font-size: 16px;
-    padding: 10px;
-  }
-}
-@media (max-width: 400px) {
-  input[type="text"], input[type="email"], textarea {
-    font-size: 14px;
-  }
-}
-@media (max-width: 400px) {
-  input[type="submit"], input[type="reset"] {
-    padding: 8px 16px;
-    font-size: 14px;
-  }
-}
 footer {
   background-color: rgba(0, 0, 0, 0.1);
   padding: 10px 20px;
@@ -354,5 +334,3 @@ body.dark-mode footer {
   background-color: rgba(255, 255, 255, 0.288);
   color: rgb(220, 220, 220);
 }
-
-
