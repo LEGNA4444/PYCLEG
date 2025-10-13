@@ -1,54 +1,54 @@
-/* rcs globals en la parte superior class en medio, especiales al pricipio y otros al final */
+/* Globals (Most Important) */
 
 /* parte superior */
 
 body {
-    background-color: rgb(66, 186, 190);
-  color: rgb(0, 0, 0);
-  transition: all 3s ease;
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  margin: 0;
-  place-items: center;
-  display: grid;
-  height: 100vh;
-  text-align: center;
-  box-sizing: border-box;
+    background-color: rgb(187, 190, 218);
+    color: rgb(0, 0, 0);
+    transition: all 3s ease;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin: 0;
+    place-items: center;
+    display: grid;
+    height: 100vh;
+    text-align: center;
+    box-sizing: border-box;
 }
 body.dark-mode {
-  background-color: rgb(60, 60, 60);
-  color: rgb(199, 199, 199);
+    background-color: rgb(60, 60, 60);
+    color: rgb(199, 199, 199);
 }
 #nav {
-  align-items: center;
-  display: flex;
-  justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 
 }
 button {
-  background-color: rgb(30, 144, 255);
-  color: rgb(255, 255, 255);
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 6px;
-  transition: background-color 0.8s ease, transform 0.2s ease;
+    background-color: rgb(30, 144, 255);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.8s ease, transform 0.2s ease;
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 1000;
-
 }
 button:hover {
-  background-color: rgb(255, 38, 0);
-  transform: scale(1.05);
+    background-color: rgb(255, 38, 0);
+    transform: scale(1.05);
 }
+
 body.dark-mode button {
-  background-color: rgb(51, 51, 51);
-  color: rgba(245, 245, 245, 11);
+    background-color: rgb(51, 51, 51);
+    color: rgba(245, 245, 245, 11);
 }
 body.dark-mode button:hover {
-  background-color: rgb(85, 85, 85);
+    background-color: rgb(85, 85, 85);
 }
 
 body.dark-mode header, body.dark-mode footer{
@@ -61,6 +61,10 @@ body.dark-mode header, body.dark-mode footer{
 
 .p01 {
   color: rgba(99, 99, 99, 1);
+  font-size: 20px;
+  font-family:Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  padding: 10px 20px;
 }
 .a01 {
   text-decoration: none;
@@ -97,9 +101,6 @@ nav ul {
   height: auto;
   vertical-align: middle;
   margin-left: 10px;
-}
-.contact-form label {
-  font-weight: bold;
 }
 .bf {
   background-color: rgb(30, 144, 255);
@@ -195,21 +196,21 @@ h4 {
   margin-bottom: 10px;
 }
 #img001 {
-  width: 500px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 500px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 #h2 {
-  font-size: 48px;
-  margin-bottom: 5px;
-  background-color: rgb(186, 28, 235);
+    font-size: 48px;
+    margin-bottom: 5px;
+    background-color: rgb(186, 28, 235);
 }
 #plog {
-  font-size: 15px;
-  margin-top: 0;
-  padding: 0 20px;
+    font-size: 15px;
+    margin-top: 0;
+    padding: 0 20px;
 }
 
 header {
@@ -227,10 +228,10 @@ header {
 }
 
 #icon {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-  vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 h1 {
   display: inline;
@@ -248,30 +249,33 @@ footer {
 }
 
 #search {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 2px;
-  font-size: 16px;
-  width: 50%px;
-  transition: background-color 1.2s ease;
-  margin-bottom: 20px;
-  box-sizing: border-box;
-  outline: none;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 16px;
+    width: 50%px;
+    transition: background-color 1.2s ease;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+  
 }
 #search:focus {
-  background-color: rgb(41, 41, 41);
-  color: rgb(0, 255, 242);
-  border: 2px solid rgb(25, 0, 255);
+    background-color: rgb(41, 41, 41);
+    color: rgb(0, 255, 242);
+    border: 2px solid rgb(25, 0, 255);
 }
 body.dark-mode #search {
-  background-color: rgb(51, 51, 51);
-  color: rgb(245, 245, 245, 11);
-  border: 1px solid rgb(85, 85, 85);
+    background-color: rgb(51, 51, 51);
+    color: rgb(245, 245, 245, 11);
+    border: 1px solid rgb(85, 85, 85);
 }
 body.dark-mode #search:focus {
-  background-color: rgb(85, 85, 85);
-  color: rgb(0, 255, 242);
-  border: 2px solid rgb(25, 0, 255);
+    background-color: rgb(85, 85, 85);
+    color: rgb(0, 255, 242);
+    border: 2px solid rgb(25, 0, 255);
 }
 
 /* fin de parte de especiales */
@@ -300,26 +304,26 @@ input[type="text"], input[type="email"] {
   font-size: 16px;
 }
 input[type="submit"], input[type="reset"] {
-  background-color: rgb(30, 144, 255);
-  color: rgb(255, 255, 255);
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 6px;
-  transition: background-color 0.8s ease, transform 0.2s ease;
-  margin-right: 10px;
+    background-color: rgb(30, 144, 255);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.8s ease, transform 0.2s ease;
+    margin-right: 10px;
 
 }
 input[type="submit"]:hover, input[type="reset"]:hover {
-  background-color: rgb(255, 38, 0);
-  transform: scale(1.05);
+    background-color: rgb(255, 38, 0);
+    transform: scale(1.05);
 }
 body.dark-mode input[type="submit"], body.dark-mode input[type="reset"] {
-  background-color: rgb(51, 51, 51);
-  color: rgb(245, 245, 245, 11);
+    background-color: rgb(51, 51, 51);
+    color: rgb(245, 245, 245, 11);
 }
 body.dark-mode input[type="submit"]:hover, body.dark-mode input[type="reset"]:hover {
-  background-color: rgb(85, 85, 85);
+    background-color: rgb(85, 85, 85);
 }
 footer {
   background-color: rgba(0, 0, 0, 0.1);
