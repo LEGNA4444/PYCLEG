@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>NALP</title>
+</head>
+<body>
+    <h1>NALP</h1>
+    <h6 id="es">NO EN OTROS IDIOMAS, SOLO ESPAÑOL.</h6>
+    <div id="contenerdor-de-busc">
+        <input type="text" id="buscar-entrada" placeholder="Buscar..." aria-label="Buscar en la lista">
+        <button id="buscar-but" aria-label="Buscar">Buscar</button>
+    </div>
+    <div id="todo">
+        <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">Todo</button>
+            <button class="filter-btn" data-filter="texto">Texto</button>
+            <button class="filter-btn" data-filter="musica">Música</button>
+            <button class="filter-btn" data-filter="img">Imágenes</button>
+            <button class="filter-btn" data-filter="lbuam">album</button>
+            <button class="filter-btn" data-filter="GAMES">juegos</button>
+        </div>
+        <ul id="items-de-la-lista">
+            <li data-url="src/url/lefty.html" data-type="musica album todo">lefty music.<img src="images/muc.png"
+                    alt="Icono de Música" class="item-thumbnail"></li>
+            <!--mis se refiere ala musica producida por el creador-->
+            <li data-url="src/url/mis.html" data-type="lbuam musica todo">MIS.<img src="images/muc.png"
+                    alt="no disponible." class="item-thumbnail"></li>
+            <li data-url="src/url/melodia2.html" data-type="musica todo">Melodía Relajante.<img src="images/musica.png"
+                    alt="Icono de Música" class="item-thumbnail"></li>
+        </ul>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
