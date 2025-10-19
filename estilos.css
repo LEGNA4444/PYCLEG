@@ -1,0 +1,42 @@
+/** Estilos generales */
+body {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(244, 244, 244);
+    color: rgb(240,0,240);
+}
+h1 {
+    color: rgb(0, 0, 0);
+}
+p {
+    color: rgb(50, 50, 50);
+}
+a {
+    color: rgb(0, 0, 255);
+}
+a:hover {
+    color: rgb(255, 0, 0);
+}
+button {
+    background-color: rgb(0, 120, 215);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: rgb(0, 90, 160);
+}
+button:active {
+    background-color: rgb(0, 60, 110);
+}
+button:disabled {
+    background-color: rgb(200, 200, 200);
+    cursor: not-allowed;
+}
