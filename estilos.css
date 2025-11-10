@@ -10,3 +10,10 @@ body {
     background-color: rgb(244, 244, 244);
     color: rgb(240,0,240);
 }
+
+#portada {
+    height: 45px;
+    width: 45px;
+    background-color: blue;
+    position: fixed;
+}
