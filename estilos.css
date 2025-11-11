@@ -16,4 +16,9 @@ body {
     width: 45px;
     background-color: blue;
     position: fixed;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
 }
