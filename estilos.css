@@ -1,24 +1,94 @@
+/* estilos mínimos usados por index.html */
 body {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(244, 244, 244);
-    color: rgb(240,0,240);
+  background-color: rgb(187, 190, 218);
+  color: #000;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: background-color 300ms ease, color 300ms ease;
+  text-align: center;
 }
 
-#portada {
-    height: 45px;
-    width: 45px;
-    background-color: blue;
-    position: fixed;
-    text-align: center;
+body.dark-mode {
+  background-color: #3c3c3c;
+  color: #c7c7c7;
 }
 
-h2 {
-    text-align: center;
+header, footer {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin: 0 auto 20px;
+  border-radius: 8px;
+  width: 70%;
 }
+
+h1 {
+  display: inline;
+  font-size: 2em;
+  vertical-align: middle;
+}
+
+#icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* botón toggle (se busca por id #toggle-dark en el HTML) */
+button#toggle-dark {
+  background-color: rgb(30, 144, 255);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+button#toggle-dark:hover { transform: scale(1.03); }
+body.dark-mode button#toggle-dark { background-color: #333; color: #f5f5f5; }
+
+/* menú y submenus usados por index.html */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 10px;
+  background-color: rgb(0, 225, 255);
+  border-radius: 8px;
+  width: 70%;
+}
+
+.menu-desplegable { position: relative; display: inline-block; padding: 10px 15px; cursor: pointer; border-radius: 8px; }
+.submenu { display: none; position: absolute; padding: 10px; background: rgba(255,255,255,0.95); list-style: none; margin: 0; border-radius: 8px; box-shadow: 0 8px 16px rgba(0,0,0,0.15); }
+.menu-desplegable:hover .submenu { display: block; }
+.submenu li { padding: 8px 12px; border-radius: 6px; }
+.submenu li:hover { background-color: rgb(5,134,209); color: #fff; }
+
+.p01 { color: rgba(99,99,99,1); font-size: 20px; padding: 10px 20px; }
+
+/* input de búsqueda */
+#search {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size: 16px;
+  width: 50%;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #000;
+}
+#search:focus { background-color: #292929; color: #00fff2; border: 2px solid rgb(25,0,255); }
+body.dark-mode #search { background-color: #333; color: #f5f5f5; border: 1px solid #555; }
+
+#x_cosa { color: rgb(255,0,0); font-size: 20px; text-decoration: none; }
+
+footer { text-align: center; font-size: 18px; }
