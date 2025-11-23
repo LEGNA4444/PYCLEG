@@ -63,7 +63,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // Lista de proyectos: edítala según necesites
     const projects = [
       { title: 'NALP', url: 'https://LEGNA4444.github.io./PYCLEG/404.html', tags: ['nalp', 'proyecto'] },
-      { title: 'INFY5', url: 'https://LEGNA4444.github.io/PYCLEG/404.html', tags: ['infy5', 'proyecto'] }
+      { title: 'INFY5', url: 'https://LEGNA4444.github.io/PYCLEG/404.html', tags: ['infy5', 'proyecto'] },
+      
     ];
 
     // Contenedor de resultados (se inserta dinámicamente)
