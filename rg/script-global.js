@@ -51,4 +51,78 @@ document.addEventListener('DOMContentLoaded', function () {
       setDarkMode(!isDark);
     }
   });
+
+  /* -----------------------
+     Sistema de búsqueda
+     - Usa una lista `projects` con { title, url, tags }
+     - Filtra en tiempo real por título/tags
+     - Click en resultado o Enter navega al primer resultado
+  ------------------------*/
+  const searchInput = document.getElementById('search');
+  if (searchInput) {
+    // Lista de proyectos: edítala según necesites
+    const projects = [
+      { title: 'NALP', url: 'https://LEGNA4444.github.io./PYCLEG/404.html', tags: ['nalp', 'proyecto'] },
+      { title: 'INFY5', url: 'https://LEGNA4444.github.io/PYCLEG/404.html', tags: ['infy5', 'proyecto'] }
+    ];
+
+    // Contenedor de resultados (se inserta dinámicamente)
+    const results = document.createElement('div');
+    results.id = 'search-results';
+    searchInput.insertAdjacentElement('afterend', results);
+
+    function render(list) {
+      if (!list || list.length === 0) {
+        results.innerHTML = '<div class="sr-no">No se encontraron proyectos</div>';
+        return;
+      }
+      results.innerHTML = list.map(p => `
+        <a class="sr-item" href="${p.url}" data-url="${p.url}" rel="noopener">
+          <strong>${p.title}</strong>
+        </a>
+      `).join('');
+    }
+
+    function findMatches(q) {
+      if (!q) return projects.slice();
+      q = q.toLowerCase();
+      return projects.filter(p => p.title.toLowerCase().includes(q) || (p.tags && p.tags.join(' ').toLowerCase().includes(q)));
+    }
+
+    // Input -> filtrar
+    searchInput.addEventListener('input', function () {
+      const q = this.value.trim();
+      const matches = findMatches(q);
+      render(matches);
+    });
+
+    // Enter -> navegar al primer resultado
+    searchInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        const q = this.value.trim();
+        const m = findMatches(q);
+        if (m.length) {
+          window.location.href = m[0].url;
+        }
+      }
+    });
+
+    // Clic en resultados -> comportamiento por defecto (navegar)
+    results.addEventListener('click', function (e) {
+      const a = e.target.closest('a.sr-item');
+      if (a) {
+        // dejar que el enlace navegue normalmente
+      }
+    });
+
+    // Cerrar resultados al clicar fuera
+    document.addEventListener('click', function (e) {
+      if (!results.contains(e.target) && e.target !== searchInput) {
+        results.innerHTML = '';
+      }
+    });
+
+    // Si el input está vacío al cargar, no mostrar nada
+    results.innerHTML = '';
+  }
 });

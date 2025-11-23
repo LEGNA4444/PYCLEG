@@ -1,106 +1,48 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error 404 - Página no encontrada</title>
-    <link rel="icon" type="image/png"
-     href="https://www.clipartmax.com/png/middle/195-1956135_error-advice-sign-vector-triangulo-con-signo-de-exclamacion.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Página no encontrada — 404</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="/rg/estilos.css">
+</head>
+<body>
+  <main role="main">
+    <header>
+      <h1>Página no encontrada</h1>
+      <p>Lo sentimos, la dirección que buscas no existe.</p>
+    </header>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            text-align: center;
-            padding: 50px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .container {
-            max-width: 600px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            color: white;
-            background-color: #007BFF;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.6s;
-        }
-        .btn:hover {
-            background-color: #4fabf7;
-            color: black;
-            border-radius: 3px;
-            font-size: 18px;
+    <section aria-labelledby="busca">
+      <h2 id="busca">Buscar proyectos</h2>
+      <input id="search" type="text" placeholder="Buscar proyectos...">
+      <!-- el script insertará #search-results automáticamente -->
+    </section>
 
-        }
-        #toggle-dark {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            padding: 10px 15px;
-            font-size: 14px;
-            cursor: pointer;
-            transition: background-color 1.5s; 
-            transform: all 0.3s;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-family: cursive;
-        }
-        #toggle-dark:hover {
-            background-color: rgb(51, 133, 201);
-            color: black;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        .dark-mode {
-            background-color: #121212;
-            color: #e0e0e0;
-        }
-        .dark-mode .container {
-            background: #1e1e1e;
-        }
-        .dark-mode .btn {
-            background-color: #BB86FC;
-        }
-        .dark-mode .btn:hover {
-            background-color: #3700B3;
-        }
-    </style>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const toggleButton = document.getElementById('toggle-dark');
-                toggleButton.addEventListener('click', function() {
-                    document.body.classList.toggle('dark-mode');
-                });
-            });
-        </script>
-    </head>
-       <body>
-            <button id="toggle-dark">Modo Oscuro</button>
-            <div class="container">
-                <h1>Error 404</h1>
-                    <p>Lo sentimos, la página que buscas no se ha encontrado.</p>
-                <a href="https://LEGNA4444.github.io/PYCLEG/index.html" class="btn">Volver a la página principal</a>
-            </div>
-        </body>
+    <section aria-labelledby="sugerencias">
+      <h2 id="sugerencias">Enlaces útiles</h2>
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/rg/contacto.html">Contacto</a></li>
+        <li><a href="/404.html">Proyectos destacados</a></li>
+      </ul>
+    </section>
+
+    <p>
+      <a href="/" class="sr-only-focusable">Volver al inicio</a>
+      <!-- botón visible -->
+      <button onclick="location.href='/'">Ir al inicio</button>
+    </p>
+  </main>
+
+  <footer>
+    <p>&copy; LEGNAR</p>
+  </footer>
+
+  <script src="/rg/script-global.js"></script>
+  <!-- opcional: redirección suave tras 10s
+  <script>setTimeout(() => location.href='/', 10000);</script>
+  -->
+</body>
 </html>

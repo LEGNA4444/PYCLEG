@@ -92,3 +92,26 @@ body.dark-mode #search { background-color: #333; color: #f5f5f5; border: 1px sol
 #x_cosa { color: rgb(255,0,0); font-size: 20px; text-decoration: none; }
 
 footer { text-align: center; font-size: 18px; }
+
+/* estilos para resultados de búsqueda */
+#search-results {
+  max-width: 600px;
+  margin: 8px auto 0;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-radius: 6px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.95);
+}
+#search-results .sr-item {
+  display: block;
+  padding: 10px 12px;
+  color: #0b66a3;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+#search-results .sr-item:hover { background: rgba(0,0,0,0.04); }
+#search-results .sr-no { padding: 10px 12px; color: #666; }
+body.dark-mode #search-results { background: rgba(20,20,20,0.9); }
+body.dark-mode #search-results .sr-item { color: #9fd7ff; }
+body.dark-mode #search-results .sr-no { color: #bbb; }
