@@ -117,7 +117,7 @@ body.dark-mode #search-results .sr-item { color: #9fd7ff; }
 body.dark-mode #search-results .sr-no { color: #bbb; }
 
 table {
-  width: 80%;
+  width: 70%;
   border-collapse: collapse;
   font-family: sans-serif;
   margin: 20px auto;
