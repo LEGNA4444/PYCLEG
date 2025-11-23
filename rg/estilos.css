@@ -119,6 +119,14 @@ body.dark-mode #search-results { background: rgba(20,20,20,0.9); }
 body.dark-mode #search-results .sr-item { color: #9fd7ff; }
 body.dark-mode #search-results .sr-no { color: #bbb; }
 
+.table-container {
+  width: 70%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+}
+
 table {
   width: 70%;
   border-collapse: collapse;
