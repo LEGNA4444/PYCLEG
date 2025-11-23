@@ -84,12 +84,12 @@ body.dark-mode button#toggle-dark { background-color: #333; color: #f5f5f5; }
   background-color: #fff;
   color: #000;
   transition: background-color 300ms ease, color 300ms ease, border 300ms ease;
-  position: fixed;
 }
 #search:focus { background-color: #292929; color: #00fff2; border: 2px solid rgb(25,0,255); }
 body.dark-mode #search { background-color: #333; color: #f5f5f5; border: 1px solid #555; }
 
-footer { text-align: center; font-size: 18px; }
+footer { text-align: center; font-size: 18px; color: rgb(0, 0, 0); }
+body.dark-mode footer { color: rgb(226, 226, 226); }
 
 /* estilos para resultados de búsqueda */
 #search-results {
@@ -101,6 +101,8 @@ footer { text-align: center; font-size: 18px; }
   overflow: hidden;
   background: rgba(255,255,255,0.95);
 }
+body.light-mode #search-results { background: rgba(255,255,255,0.95); }
+body.dark-mode #search-results { background: rgba(20,20,20,0.9); }
 #search-results .sr-item {
   display: block;
   padding: 10px 12px;
@@ -108,6 +110,8 @@ footer { text-align: center; font-size: 18px; }
   text-decoration: none;
   border-bottom: 1px solid rgba(0,0,0,0.06);
 }
+body.light-mode #search-results .sr-item { color: #0b66a3; }
+body.dark-mode #search-results .sr-item { color: #9fd7ff; }
 #search-results .sr-item:hover { background: rgba(0,0,0,0.04); }
 #search-results .sr-no { padding: 10px 12px; color: #666; }
 body.dark-mode #search-results { background: rgba(20,20,20,0.9); }
@@ -121,22 +125,44 @@ table {
   margin: 20px auto;
   background-color: rgb(rgba(73, 62, 62, 0.308), green, blue);
 }
+body.dark-mode table {
+  background-color: rgba(50, 50, 50, 0.5);
+}
 th, td {
   border: 1px solid rgb(221, 221, 221);
   padding: 8px;
   text-align: left;
+}
+body.dark-mode th, body.dark-mode td {
+  border: 1px solid rgb(100, 100, 100);
 }
 th {
   background-color: rgb(242, 242, 242);
   color: rgb(51, 51, 51);
   font-weight: bold;
 }
+body.dark-mode th {
+  background-color: rgb(70, 70, 70);
+  color: rgb(220, 220, 220);
+}
 tbody tr:nth-child(even) {
   background-color: rgb(249, 249, 249);
 
+}
+body.dark-mode tbody tr:nth-child(even) {
+  background-color: rgb(60, 60, 60);
+}
+tbody tr:hover {
+  background-color: rgb(235, 235, 235);
+}
+body.dark-mode tbody tr:hover {
+  background-color: rgb(80, 80, 80);
 }
 caption {
   padding: 10px;
   font-size: 1.2em;
   font-weight: bold;
+}
+body.dark-mode caption {
+  color: rgb(220, 220, 220);
 }
