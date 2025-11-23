@@ -118,6 +118,8 @@ table {
   width: 80%;
   border-collapse: collapse;
   font-family: sans-serif;
+  margin: 20px auto;
+  background-color: rgb(rgba(73, 62, 62, 0.308), green, blue);
 }
 th, td {
   border: 1px solid rgb(221, 221, 221);
