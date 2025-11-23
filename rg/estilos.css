@@ -84,6 +84,7 @@ body.dark-mode button#toggle-dark { background-color: #333; color: #f5f5f5; }
   background-color: #fff;
   color: #000;
   transition: background-color 300ms ease, color 300ms ease, border 300ms ease;
+  position: fixed;
 }
 #search:focus { background-color: #292929; color: #00fff2; border: 2px solid rgb(25,0,255); }
 body.dark-mode #search { background-color: #333; color: #f5f5f5; border: 1px solid #555; }
