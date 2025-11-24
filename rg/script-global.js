@@ -132,27 +132,20 @@ document.addEventListener('DOMContentLoaded', function () {
         (function () {
             const form = document.getElementById('form-contacto');
             const respuesta = document.getElementById('form-respuesta');
-
             if (!form) return;
-
-
-
             form.addEventListener('submit', function (e) {
                 e.preventDefault();
                 respuesta.style.color = 'green';
                 respuesta.textContent = '';
-
                 const nombre = document.getElementById('nombre').value.trim();
                 const email = document.getElementById('email').value.trim();
                 const asunto = document.getElementById('asunto').value.trim();
                 const mensaje = document.getElementById('mensaje').value.trim();
-
                 if (!nombre || !email || !asunto || !mensaje) {
                     respuesta.style.color = 'crimson';
                     respuesta.textContent = 'Por favor completa todos los campos obligatorios.';
                     return;
                 }
-
                 // Añadir campos ocultos recomendados por Formspree
                 // _replyto para que Formspree pueda responder al remitente
                 let reply = form.querySelector('input[name="_replyto"]');
@@ -163,7 +156,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     form.appendChild(reply);
                 }
                 reply.value = email;
-
                 // _subject opcional
                 let subj = form.querySelector('input[name="_subject"]');
                 if (!subj) {
@@ -173,11 +165,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     form.appendChild(subj);
                 }
                 subj.value = asunto + ' — ' + nombre;
-
                 // Mostrar estado y enviar el formulario (POST to Formspree)
                 respuesta.style.color = 'green';
                 respuesta.textContent = 'Enviando...';
-
                 // Permitir envío por POST al action configurado en el formulario
                 form.submit();
             });
