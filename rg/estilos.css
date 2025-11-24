@@ -11,6 +11,12 @@ body {
   list-style: none;
 }
 
+h3 {
+  color: #000000;
+  font-size: 15px;
+  text-decoration: none;
+}
+
 body.dark-mode {
   background-color: #3c3c3c;
   color: #c7c7c7;
