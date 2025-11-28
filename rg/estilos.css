@@ -5,11 +5,12 @@
   --color-text-light: #1a1a1a;
   --color-text-dark: #e5e5e5;
   --color-accent: #0066cc;
-  --color-accent-dark: #4da6ff;
+  --color-accent-dark: rgb(47, 142, 231);
   --color-secondary: #ff6b6b;
   --color-border: #ccc;
   --color-hover: #e8e8e8;
   --transition-time: 3.35s;
+  
 }
 
 /* estilos mínimos usados por index.html */
@@ -58,7 +59,7 @@ button#toggle-dark {
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 6px;
-  transition: transform 3.35s ease, background-color 3.35s ease;
+  transition: transform 0.35s ease, background-color 0.35s ease;
   position: fixed;
   bottom: 20px;
   right: 20px;
