@@ -25,6 +25,18 @@ body {
   text-align: center;
   list-style: none;
 }
+.contenedor-generico {
+  width: 60%;
+  margin: 0 auto;
+  text-align: justify;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(31, 42, 53, 0.192);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  
+}
 
 h3 {
   color: black;
