@@ -26,7 +26,7 @@ body {
 }
 
 h3 {
-  color: #000000;
+  color: black;
   font-size: 15px;
   text-decoration: none;
 }
@@ -58,7 +58,7 @@ button#toggle-dark {
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 6px;
-  transition: transform 0.15s ease, background-color 0.15s ease;
+  transition: transform 0.35s ease, background-color 0.35s ease;
   position: fixed;
   bottom: 20px;
   right: 20px;

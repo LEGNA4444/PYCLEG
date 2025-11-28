@@ -26,9 +26,8 @@ Creo sitios profesionales usando HTML5, CSS3 y JavaScript vanilla — sin framew
 - ✅ CSS3 responsivo (mobile-first)
 - ✅ JavaScript vanilla (sin dependencias)
 - ✅ Modo oscuro
-- ✅ SEO optimizado
 - ✅ Código limpio y documentado
-- ✅ GitHub Pages hosting (gratuito)
+- ✅ GitHub Pages hosting (gratuito y opcional para el cliente)
 
 ---
 
@@ -36,7 +35,6 @@ Creo sitios profesionales usando HTML5, CSS3 y JavaScript vanilla — sin framew
 
 - 📌 **Portafolios personales** — Muestra tu trabajo a clientes potenciales
 - 🚀 **Landing pages** — Promociona productos o servicios
-- 📊 **Sitios corporativos** — Presencia profesional online
 - 🎨 **Portafolios creativos** — Diseño personalizado
 
 ---
@@ -44,7 +42,7 @@ Creo sitios profesionales usando HTML5, CSS3 y JavaScript vanilla — sin framew
 ## 🛠️ Stack Técnico
 
 - **HTML5** → Semántica correcta, meta tags, open graph
-- **CSS3** → Variables CSS, flexbox, grid, dark mode
+- **CSS3** → Variables CSS, Modo Oscuro
 - **JavaScript (ES6+)** → Vanilla, sin jQuery ni frameworks
 - **Hosting** → GitHub Pages (gratuito, automático, seguro)
 
@@ -57,8 +55,6 @@ Creo sitios profesionales usando HTML5, CSS3 y JavaScript vanilla — sin framew
 | 🏃 **Rápido** | Sitios estáticos cargan en milisegundos |
 | 🔒 **Seguro** | Sin base de datos, sin vulnerabilidades comunes |
 | 💰 **Económico** | Desde $200, sin costos ocultos o sorpresas |
-| 📱 **Responsive** | Se ve bien en cualquier dispositivo |
-| 🔍 **SEO** | Optimizado desde el inicio para buscadores |
 | 🛠️ **Mantenible** | Código limpio, fácil de actualizar después |
 
 ---
@@ -67,7 +63,7 @@ Creo sitios profesionales usando HTML5, CSS3 y JavaScript vanilla — sin framew
 
 ### 1️⃣ Conversación Inicial
 - Discutimos tus necesidades, visión y presupuesto
-- Cotización clara, sin sorpresas
+- Cotización clara, sin sorpresas 
 
 ### 2️⃣ Diseño & Desarrollo
 - Creo el sitio con actualizaciones semanales
@@ -75,10 +71,10 @@ Creo sitios profesionales usando HTML5, CSS3 y JavaScript vanilla — sin framew
 
 ### 3️⃣ Revisiones & Entrega
 - Máximo 2 rondas de cambios incluidas
-- Entrega final con documentación
+- Entrega final con documentación total
 
 ### 4️⃣ Soporte
-- Disponible para consultas post-entrega
+- Disponible para consultas post-entrega en días aviles
 - Actualizaciones futuras por acuerdo
 
 ---
@@ -86,7 +82,7 @@ Creo sitios profesionales usando HTML5, CSS3 y JavaScript vanilla — sin framew
 ## 💬 Contacto
 
 - 📧 **Email**: [legna.gcatpm@gmail.com](mailto:legna.gcatpm@gmail.com)
-- 🌐 **Web**: [https://LEGNA4444.github.io/PYCLEG/](https://LEGNA4444.github.io/PYCLEG/)
+- 🌐 **Portafolios**: [https://LEGNA4444.github.io/PYCLEG/](https://LEGNA4444.github.io/PYCLEG/)
 - 📝 **Formulario**: [Solicitar cotización](https://LEGNA4444.github.io/PYCLEG/rg/contacto.html)
 
 ---
