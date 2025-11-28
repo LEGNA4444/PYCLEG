@@ -58,7 +58,7 @@ button#toggle-dark {
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 6px;
-  transition: transform 1s ease, background-color 1s ease;
+  transition: transform 3s ease, background-color 3s ease;
   position: fixed;
   bottom: 20px;
   right: 20px;
