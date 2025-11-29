@@ -13,6 +13,7 @@
   
 }
 
+
 /* estilos mínimos usados por index.html */
 body {
   background-color: var(--color-bg-light);
@@ -24,6 +25,26 @@ body {
   transition: background-color var(--transition-time) ease, color var(--transition-time) ease;
   text-align: center;
   list-style: none;
+}
+#div-espdser {
+  text-align: center;
+  color: var(--color-text-light);
+}
+#div-espdser a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+#div-espdser a:hover {
+  text-decoration: underline;
+}
+#div-espdser body.dark-mode {
+  color: var(--color-text-dark);
+}
+#div-espdser body.dark-mode a {
+  color: var(--color-accent-dark);
+}
+#div-espdser body.dark-mode a:hover {
+  text-decoration: underline;
 }
 
 .contenedor-generico {
