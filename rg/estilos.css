@@ -25,6 +25,8 @@ body {
   transition: background-color var(--transition-time) ease, color var(--transition-time) ease;
   text-align: center;
   list-style: none;
+  line-height: 1.6;
+  
 }
 #div-espdser {
   text-align: center;
@@ -63,6 +65,11 @@ body {
   font-size: 20px;
   text-decoration: none;
 }
+body.dark-mode .contenedor-generico {
+  background-color: rgba(50, 50, 50, 0.5);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
 .bf {
   width: 100%;
   height: auto;
@@ -76,8 +83,19 @@ h3 {
   font-size: 15px;
   text-decoration: none;
 }
+body.dark-mode h3 {
+  color: #f0f0f0;
+}
+h6 {
+  color: black;
+  font-size: 12px;
+  text-decoration: none;
+}
+body.dark-mode h6 {
+  color: #f0f0f0;
+}
 
-body.dark-mode {
+body.dark-mode {  
   background-color: var(--color-bg-dark);
   color: var(--color-text-dark);
 }
