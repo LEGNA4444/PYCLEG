@@ -26,7 +26,20 @@ body {
   text-align: center;
   list-style: none;
   line-height: 1.6;
-  
+
+}
+link {
+  text-decoration: none;
+  color: red;
+}
+li {
+  text-decoration: none;
+  color: var(--color-text-light);
+  list-style: none;
+}
+body.dark-mode li {
+  color: var(--color-text-dark);
+  list-style: none;
 }
 #div-espdser {
   text-align: center;
