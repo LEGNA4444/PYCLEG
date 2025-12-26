@@ -52,6 +52,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  document.getElementById("bock-to-up") ?.addEventListener("click", function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
   /* -----------------------
      Sistema de búsqueda
      - Usa una lista `projects` con { title, url, tags }
