@@ -51,10 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
       setDarkMode(!isDark);
     }
   });
-
-  document.getElementById("bock-to-up") ?.addEventListener("click", function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+ 
 
   /* -----------------------
      Sistema de búsqueda
