@@ -65,7 +65,7 @@ const game = {
       numberOfPoints = 1;
     }
 
-    const MIN_POINT_DISTANCE_BETWEEN_POINTS = 4; 
+    const MIN_POINT_DISTANCE_BETWEEN_POINTS = 6; 
     
     // Nueva lógica para el punto a un 80% de distancia
     const MIN_DISTANCE_FROM_PLAYER = Math.floor(this.moves * 0.8);
