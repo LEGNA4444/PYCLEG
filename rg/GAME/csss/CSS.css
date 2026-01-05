@@ -103,23 +103,6 @@ h1 {
 #reset-button:hover {
     background-color: #C16719;
 }
-/*Estilos para el botón de LECTURAS en estado de pruebas*/
-
-.a-lista_J {
-    border-bottom: 2px solid #5BFFEC;
-    background-color: #E78A38;
-    color: #308ADC;
-    text-decoration: none;
-    padding: 10px 20px;
-    margin-top: 20px;
-    border-radius: 5px;
-    display: inline-block;
-}
-
-.a-lista_J:hover {
-    background-color: #F52D00;
-    border-bottom-color: #5BFFEC;
-}
 
 #level {
     background-color: #15ff00;
