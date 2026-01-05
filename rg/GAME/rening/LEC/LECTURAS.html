@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Generador de Historias Personalizado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Generador de Historias Personalizado</h1>
+    
+    <div class="opciones">
+        <label for="generoSelect">Elige un género:</label>
+        <select id="generoSelect">
+            <option value="fantasia">Fantasía</option>
+            <option value="cienciaFiccion">Ciencia Ficción</option>
+            <option value="mis">mis</option>
+            </select>
+        
+        <label for="largoSelect">Elige el largo:</label>
+        <select id="largoSelect">
+            <option value="corta">Corta</option>
+            <option value="larga">Larga</option>
+        </select>
+    </div>
+
+    <button id="generarBtn">¡Crear Historia!</button>
+    <p id="historiaContenedor"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -65,6 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const projects = [
       { title: 'NALP', url: 'https://LEGNA4444.github.io./PYCLEG/404.html', tags: ['nalp', 'proyecto'] },
       { title: 'INFY5', url: 'https://LEGNA4444.github.io/PYCLEG/404.html', tags: ['infy5', 'proyecto'] },
+      { title: 'laberinto matematico', url: 'https://LEGNA4444.github.io/PYCLEG/rg/GAME/GAME.html', tags: ['juego', 'facil'] },
 
     ];
 
