@@ -2,7 +2,7 @@ const gameGrid = document.getElementById('game-grid');
 const movesLeftEl = document.getElementById('moves-left');
 const levelEl = document.getElementById('level');
 
-const MAX_LEVEL = 20;
+const MAX_LEVEL = 14;
 let isMoving = false; 
 // Variable de control de movimiento
 
