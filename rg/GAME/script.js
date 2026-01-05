@@ -20,7 +20,7 @@ const game = {
   },
 
   setupGame() {
-    let columns = 4 + (this.level - 1) * 2;
+    let columns = 4 + (this.level - 1) ;
     let rows = 8 + (this.level - 1) ;
 
     if (this.level >= 16) {
