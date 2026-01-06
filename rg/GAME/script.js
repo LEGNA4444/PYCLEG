@@ -2,7 +2,8 @@ const gameGrid = document.getElementById('game-grid');
 const movesLeftEl = document.getElementById('moves-left');
 const levelEl = document.getElementById('level');
 
-const MAX_LEVEL = 14;
+const MAX_LEVEL = 50;
+const STORAGE_KEY = 'game-progress';
 let isMoving = false; 
 // Variable de control de movimiento
 
@@ -15,21 +16,48 @@ const game = {
   start: { x: 0, y: 0 },
 
   init() {
-    this.level = 1;
+    this.loadProgress();
     this.setupGame();
   },
 
-  setupGame() {
-    let columns = 4 + (this.level - 1) ;
-    let rows = 8 + (this.level - 1) ;
+  saveProgress() {
+    try {
+      const progress = {
+        level: this.level,
+        moves: this.moves,
+        timestamp: Date.now()
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+    } catch (e) {
+      console.log('No se pudo guardar el progreso');
+    }
+  },
 
-    if (this.level >= 16) {
-      columns = 16;
-      rows = 4 + (this.level - 1);
+  loadProgress() {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        const progress = JSON.parse(saved);
+        this.level = Math.max(1, Math.min(progress.level, MAX_LEVEL));
+      } else {
+        this.level = 1;
+      }
+    } catch (e) {
+      this.level = 1;
+    }
+  },
+
+  setupGame() {
+    let columns = 5 + (this.level - 1) * 0.5;
+    let rows = 10 + (this.level - 1) * 0.8;
+
+    if (this.level >= 20) {
+      columns = Math.min(20, 5 + (this.level - 1) * 0.3);
+      rows = Math.min(25, 10 + (this.level - 1) * 0.5);
     }
 
-    this.gridSize = { columns: columns, rows: rows };
-    this.moves = 4 + (this.level - 1) * 4 + 1;
+    this.gridSize = { columns: Math.floor(columns), rows: Math.floor(rows) };
+    this.moves = Math.max(3, Math.floor(8 - (this.level - 1) * 0.15));
     this.player = { x: 0, y: 0 };
     this.points = [];
     this.start = { x: 0, y: 0 };
@@ -51,24 +79,25 @@ const game = {
   generatePoints() {
     this.points = [];
     
-    const condition = Math.random() < 0.8;
+    const condition = Math.random() < 0.7;
     let numberOfPoints;
 
     if (condition) {
-      numberOfPoints = Math.floor(this.gridSize.columns / 2);
+      numberOfPoints = Math.floor(this.gridSize.columns * 0.9);
     } else {
-      const baseValue = Math.floor(this.gridSize.columns / 2);
-      numberOfPoints = Math.floor(baseValue * 0.35);
+      const baseValue = Math.floor(this.gridSize.columns * 0.9);
+      numberOfPoints = Math.floor(baseValue * 0.6);
     }
 
-    if (numberOfPoints < 1) {
-      numberOfPoints = 1;
+    numberOfPoints = Math.min(numberOfPoints, Math.floor(this.gridSize.columns * this.gridSize.rows * 0.15));
+    if (numberOfPoints < 2) {
+      numberOfPoints = 2;
     }
 
-    const MIN_POINT_DISTANCE_BETWEEN_POINTS = 6; 
+    const MIN_POINT_DISTANCE_BETWEEN_POINTS = Math.max(4, Math.floor(5 - this.level * 0.05)); 
     
-    // Nueva lógica para el punto a un 80% de distancia
-    const MIN_DISTANCE_FROM_PLAYER = Math.floor(this.moves * 0.8);
+    // Nueva lógica para el punto a un 85% de distancia
+    const MIN_DISTANCE_FROM_PLAYER = Math.floor(this.moves * 0.85);
     let firstPointGenerated = false;
 
     // Generar al menos un punto a la distancia mínima del 80%
@@ -194,11 +223,12 @@ const game = {
     if (this.points.length === 0) {
       this.level++;
       if (this.level > MAX_LEVEL) {
-        alert("¡Felicidades! Has completado todos los niveles.");
+        alert("¡Felicidades! Has completado todos los niveles. ¡Eres un maestro!");
         this.level = MAX_LEVEL;
-        // Opcional: puedes deshabilitar el grid o mostrar un mensaje final
+        this.saveProgress();
       } else {
         alert(`¡Nivel completado! Avanzas al nivel ${this.level}.`);
+        this.saveProgress();
         this.setupGame();
       }
     } else if (this.moves <= 0) {
