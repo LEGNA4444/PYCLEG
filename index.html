@@ -41,6 +41,7 @@
                         <li><a href="https://LEGNA4444.github.io/PYCLEG/rg/sobre.html">sobre mi</a></li>
                         <li><a href="https://LEGNA4444.github.io/PYCLEG/rg/contacto.html">Contacto</a></li>
                         <li><a href="https://LEGNA4444.github.io/PYCLEG/privacidad.html">privacidad</a></li>
+
                     </ul>
                 </li>
             </ul>
@@ -53,38 +54,32 @@
 
         <section class="servicios-container" style="margin-top: 60px;">
             <div class="servicio-card">
-                <h3>🚀 Startup</h3>
-                <p>Sitio básico, limpio y profesional. Perfecto para empezar.</p>
-                <ul style="font-size: 0.9em; margin: 10px 0;">
-                    <li>3-5 secciones</li>
-                    <li>Diseño responsive</li>
-                    <li>Entrega: 3-5 días</li>
-                </ul>
-                <div class="precio">$200 - $500</div>
-            </div>
+                <h3>Simulador de precios</h3>
+                <p>Selecciona un paquete base y añade opciones; el total se actualiza automáticamente.</p>
 
-            <div class="servicio-card">
-                <h3>💼 Business</h3>
-                <p>Sitio moderno con más opciones y funcionalidades avanzadas.</p>
-                <ul style="font-size: 0.9em; margin: 10px 0;">
-                    <li>5-7 secciones</li>
-                    <li>Modo oscuro</li>
-                    <li>Formulario de contacto</li>
-                    <li>Entrega: 5-7 días</li>
-                </ul>
-                <div class="precio">$800 - $1,500</div>
-            </div>
+                <fieldset style="margin-top:12px; text-align:left;">
+                  <legend>Paquete base</legend>
+                  <label><input type="radio" name="pkg" value="startup" data-price="150" checked> Startup — $150</label><br>
+                  <label><input type="radio" name="pkg" value="business" data-price="600"> Business — $600</label><br>
+                  <label><input type="radio" name="pkg" value="premium" data-price="2000"> Premium — $2000</label>
+                </fieldset>
 
-            <div class="servicio-card"> 
-                <h3>⭐ Premium</h3>
-                <p>Solución completa con diseño personalizado y funciones avanzadas.</p>
-                <ul style="font-size: 0.9em; margin: 10px 0;">
-                    <li>7+ secciones</li>
-                    <li>Animaciones suaves</li>
-                    <li>Sistema de búsqueda</li>
-                    <li>Entrega: 7-10 días</li>
-                </ul>
-                <div class="precio">$2,000+</div>
+                <fieldset style="margin-top:12px; text-align:left;">
+                  <legend>Opciones adicionales</legend>
+                  <label><input type="checkbox" value="seo" data-price="80"> Optimización SEO — $80</label><br>
+                  <label><input type="checkbox" value="shop" data-price="250"> Tienda básica — $250</label><br>
+                  <label><input type="checkbox" value="multi" data-price="180"> Multi-idioma — $180</label><br>
+                  <label><input type="checkbox" value="cms" data-price="120"> CMS básico — $120</label>
+                </fieldset>
+
+                <div style="margin-top:12px; text-align:left;">
+                  <strong>Total estimado: </strong><span id="sim-total">$0.00</span>
+                </div>
+
+                <div style="margin-top:12px; text-align:left;">
+                  <button id="sim-save" style="padding:8px 12px; border-radius:6px;">Guardar simulación</button>
+                </div>
+                <p style="margin-top:8px; font-size:0.9em; color:#666;">La simulación se guarda en tu navegador.</p>
             </div>
         </section>
 

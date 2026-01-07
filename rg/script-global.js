@@ -128,6 +128,63 @@ document.addEventListener('DOMContentLoaded', function () {
     // Si el input está vacío al cargar, no mostrar nada
     results.innerHTML = '';
   }
+  
+  // Inicializar simulador de precios (si existe el UI)
+  (function(){
+    const SIM_KEY = 'simulator';
+    const totalEl = document.getElementById('sim-total');
+    const saveBtn = document.getElementById('sim-save');
+    const servicioCard = totalEl ? totalEl.closest('.servicio-card') : null;
+  
+    if (!totalEl || !servicioCard) return;
+  
+    const packageRadios = servicioCard.querySelectorAll('input[name="pkg"]');
+    const optionInputs = servicioCard.querySelectorAll('input[type="checkbox"][data-price]');
+  
+    function calcTotal(){
+      let base = 0;
+      const sel = servicioCard.querySelector('input[name="pkg"]:checked');
+      if (sel) base = parseFloat(sel.dataset.price) || 0;
+      let total = base;
+      optionInputs.forEach(o => { if (o.checked) total += parseFloat(o.dataset.price) || 0; });
+      totalEl.textContent = '$' + total.toFixed(2);
+      servicioCard.dataset.currentTotal = total;
+      return total;
+    }
+  
+    packageRadios.forEach(r => r.addEventListener('change', calcTotal));
+    optionInputs.forEach(o => o.addEventListener('change', calcTotal));
+  
+    // Cargar simulación guardada
+    try{
+      const saved = localStorage.getItem(SIM_KEY);
+      if (saved) {
+        const obj = JSON.parse(saved);
+        if (obj.pkg) {
+          const radio = servicioCard.querySelector('input[name="pkg"][value="'+obj.pkg+'"]');
+          if (radio) radio.checked = true;
+        }
+        if (obj.options && Array.isArray(obj.options)){
+          optionInputs.forEach(o => o.checked = obj.options.includes(o.value));
+        }
+      }
+    } catch(e) {}
+  
+    calcTotal();
+  
+    if (saveBtn) saveBtn.addEventListener('click', function(){
+      const pkg = servicioCard.querySelector('input[name="pkg"]:checked')?.value || '';
+      const options = Array.from(optionInputs).filter(o => o.checked).map(o => o.value);
+      const data = { pkg, options, total: servicioCard.dataset.currentTotal };
+      try{
+        localStorage.setItem(SIM_KEY, JSON.stringify(data));
+        alert('Simulación guardada en el navegador.');
+      } catch(e){
+        alert('No se pudo guardar la simulación.');
+      }
+    });
+  })();
+  
 });
 
 // Lógica para el formulario de contacto usando Formspree
