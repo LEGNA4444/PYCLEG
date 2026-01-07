@@ -138,21 +138,25 @@ document.addEventListener('DOMContentLoaded', function () {
   
     if (!totalEl || !servicioCard) return;
   
-    const packageRadios = servicioCard.querySelectorAll('input[name="pkg"]');
     const optionInputs = servicioCard.querySelectorAll('input[type="checkbox"][data-price]');
+    const sectionsInput = servicioCard.querySelector('#sim-sections');
   
     function calcTotal(){
-      let base = 0;
-      const sel = servicioCard.querySelector('input[name="pkg"]:checked');
-      if (sel) base = parseFloat(sel.dataset.price) || 0;
-      let total = base;
+      let total = 0;
+      // secciones
+      if (sectionsInput) {
+        const count = parseInt(sectionsInput.value, 10) || 0;
+        const per = parseFloat(sectionsInput.dataset.pricePer) || 0;
+        total += count * per;
+      }
+      // opciones
       optionInputs.forEach(o => { if (o.checked) total += parseFloat(o.dataset.price) || 0; });
       totalEl.textContent = '$' + total.toFixed(2);
       servicioCard.dataset.currentTotal = total;
       return total;
     }
-  
-    packageRadios.forEach(r => r.addEventListener('change', calcTotal));
+
+    if (sectionsInput) sectionsInput.addEventListener('input', calcTotal);
     optionInputs.forEach(o => o.addEventListener('change', calcTotal));
   
     // Cargar simulación guardada
@@ -160,9 +164,8 @@ document.addEventListener('DOMContentLoaded', function () {
       const saved = localStorage.getItem(SIM_KEY);
       if (saved) {
         const obj = JSON.parse(saved);
-        if (obj.pkg) {
-          const radio = servicioCard.querySelector('input[name="pkg"][value="'+obj.pkg+'"]');
-          if (radio) radio.checked = true;
+        if (obj.sections && sectionsInput) {
+          sectionsInput.value = obj.sections;
         }
         if (obj.options && Array.isArray(obj.options)){
           optionInputs.forEach(o => o.checked = obj.options.includes(o.value));
@@ -173,9 +176,9 @@ document.addEventListener('DOMContentLoaded', function () {
     calcTotal();
   
     if (saveBtn) saveBtn.addEventListener('click', function(){
-      const pkg = servicioCard.querySelector('input[name="pkg"]:checked')?.value || '';
+      const sections = sectionsInput ? parseInt(sectionsInput.value,10) || 0 : 0;
       const options = Array.from(optionInputs).filter(o => o.checked).map(o => o.value);
-      const data = { pkg, options, total: servicioCard.dataset.currentTotal };
+      const data = { sections, options, total: servicioCard.dataset.currentTotal };
       try{
         localStorage.setItem(SIM_KEY, JSON.stringify(data));
         alert('Simulación guardada en el navegador.');

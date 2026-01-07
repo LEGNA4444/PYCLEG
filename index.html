@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LEGNAR — Desarrollo Web Profesional | Portafolios, Landing Pages</title>
     <link rel="stylesheet" href="https://LEGNA4444.github.io/PYCLEG/rg/estilos.css">
-  <!--  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/308/308571.png"> -->
+    <!--  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/308/308571.png"> -->
     <link rel="icon" type="image/png" href="https://LEGNA4444.github.io/PYCLEG/icon.png">
     <meta name="description"
         content="Desarrollo web profesional. Creo sitios rápidos, seguros y económicos. Portafolios, landing pages, sitios estáticos. Desde $200. Cotización gratis.">
@@ -16,7 +16,7 @@
     <meta property="og:title" content="LEGNAR — Desarrollo Web Profesional">
 
     <meta property="og:description"
-        content="Creo sitios web rápidos y económicos. Especializado en portafolios y landing pages.">     
+        content="Creo sitios web rápidos y económicos. Especializado en portafolios y landing pages.">
     <meta property="og:url" content="https://LEGNA4444.github.io/PYCLEG/">
     <meta property="og:type" content="website">
     <!--
@@ -55,28 +55,29 @@
         <section class="servicios-container" style="margin-top: 60px;">
             <div class="servicio-card">
                 <h3>Simulador de precios</h3>
-                <p>Selecciona un paquete base y añade opciones; el total se actualiza automáticamente.</p>
+                <p>Selecciona las características que quieres en tu sitio; el total se actualiza en tiempo real.</p>
 
                 <fieldset style="margin-top:12px; text-align:left;">
-                  <legend>Paquete base</legend>
-                  <label><input type="radio" name="pkg" value="startup" data-price="150" checked> Startup — $150</label><br>
-                  <label><input type="radio" name="pkg" value="business" data-price="600"> Business — $600</label><br>
-                  <label><input type="radio" name="pkg" value="premium" data-price="2000"> Premium — $2000</label>
-                </fieldset>
-
-                <fieldset style="margin-top:12px; text-align:left;">
-                  <legend>Opciones adicionales</legend>
-                  <label><input type="checkbox" value="seo" data-price="80"> Optimización SEO — $80</label><br>
-                  <label><input type="checkbox" value="shop" data-price="250"> Tienda básica — $250</label><br>
-                  <label><input type="checkbox" value="multi" data-price="180"> Multi-idioma — $180</label><br>
+                    <legend>Características</legend>
+                    <label>Secciones principales: <input id="sim-sections" type="number" min="1" max="50" value="3"
+                            data-price-per="30" style="width:60px; margin-left:8px;"> (cada sección $30)</label><br>
+                    <label><input type="checkbox" value="responsive" data-price="120"> Diseño responsive —
+                        $120</label><br>
+                    <label><input type="checkbox" value="animations" data-price="60"> Animaciones — $60</label><br>
+                    <label><input type="checkbox" value="contact" data-price="40"> Formulario de contacto —
+                        $40</label><br>
+                    <label><input type="checkbox" value="seo" data-price="80"> Optimización SEO — $80</label><br>
+                    <label><input type="checkbox" value="shop" data-price="250"> Tienda básica — $250</label><br>
+                    <label><input type="checkbox" value="multi" data-price="180"> Multi-idioma — $180</label><br>
+                    <label><input type="checkbox" value="cms" data-price="120"> CMS básico — $120</label><br>
                 </fieldset>
 
                 <div style="margin-top:12px; text-align:left;">
-                  <strong>Total estimado: </strong><span id="sim-total">$0.00</span>
+                    <strong>Total estimado: </strong><span id="sim-total">$0.00</span>
                 </div>
 
                 <div style="margin-top:12px; text-align:left;">
-                  <button id="sim-save" style="padding:8px 12px; border-radius:6px;">Guardar simulación</button>
+                    <button id="sim-save" style="padding:8px 12px; border-radius:6px;">Guardar simulación</button>
                 </div>
                 <p style="margin-top:8px; font-size:0.9em; color:#666;">La simulación se guarda en tu navegador.</p>
             </div>
@@ -90,9 +91,10 @@
         </div>
     </main>
 
-    <h2 id="advertencia">advertencia: asegurese de entender la totalidad del servicio, puede verificar cosas en <a href="https://LEGNA4444.github.io/PYCLEG/rg/especificacionesdelservicio.html">terminos</a></h2>
-    
-    
+    <h2 id="advertencia">advertencia: asegurese de entender la totalidad del servicio, puede verificar cosas en <a
+            href="https://LEGNA4444.github.io/PYCLEG/rg/especificacionesdelservicio.html">terminos</a></h2>
+
+
 
     <footer>
         <p>&copy; Creado e idealizado por:
