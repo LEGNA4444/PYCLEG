@@ -96,12 +96,15 @@ const game = {
 
     const MIN_POINT_DISTANCE_BETWEEN_POINTS = Math.max(4, Math.floor(5 - this.level * 0.05)); 
     
-    // Nueva lógica para el punto a un 85% de distancia
+    // Nueva lógica para el punto a un 85% de distancia (con protección contra bucles)
     const MIN_DISTANCE_FROM_PLAYER = Math.floor(this.moves * 0.85);
     let firstPointGenerated = false;
+    let attempts = 0;
+    const MAX_FIRST_POINT_ATTEMPTS = 500;
 
-    // Generar al menos un punto a la distancia mínima del 80%
-    while (!firstPointGenerated) {
+    // Generar al menos un punto a la distancia mínima del 85% (intentos limitados)
+    while (!firstPointGenerated && attempts < MAX_FIRST_POINT_ATTEMPTS) {
+        attempts++;
         const x = Math.floor(Math.random() * this.gridSize.columns);
         const y = Math.floor(Math.random() * this.gridSize.rows);
         const distance = Math.abs(x - this.start.x) + Math.abs(y - this.start.y);
@@ -112,8 +115,23 @@ const game = {
         }
     }
 
-    // Generar el resto de los puntos
-    while (this.points.length < numberOfPoints) {
+    // Fallback: si no se pudo generar tras muchos intentos, coloca el primer punto en la primera celda libre
+    if (!firstPointGenerated) {
+      for (let y = 0; y < this.gridSize.rows && !firstPointGenerated; y++) {
+        for (let x = 0; x < this.gridSize.columns && !firstPointGenerated; x++) {
+          if ((x !== this.start.x || y !== this.start.y) && !this.isPoint(x, y)) {
+            this.points.push({ x: x, y: y, value: Math.floor(Math.random() * 10) + 1 });
+            firstPointGenerated = true;
+          }
+        }
+      }
+    }
+
+    // Generar el resto de los puntos (con límite de intentos para evitar bucles)
+    let attempts2 = 0;
+    const MAX_ATTEMPTS = Math.max(1000, numberOfPoints * 50);
+    while (this.points.length < numberOfPoints && attempts2 < MAX_ATTEMPTS) {
+      attempts2++;
       const x = Math.floor(Math.random() * this.gridSize.columns);
       const y = Math.floor(Math.random() * this.gridSize.rows);
       
@@ -121,6 +139,8 @@ const game = {
         this.points.push({ x: x, y: y, value: Math.floor(Math.random() * 10) + 1 });
       }
     }
+
+    // Si no se alcanzó el número deseado, no entorpecer el juego; aceptar la cantidad generada
   },
 
   isPoint(x, y) {
@@ -244,4 +264,50 @@ function resetGame() {
   game.init();
 }
 
-window.onload = () => game.init();
+// Inicializa audio dinámico como fallback si el MP3 falla o está ausente
+function initBackgroundAudioFallback() {
+  const audioEl = document.getElementById('background-music');
+  let audioCtx, osc, gain;
+
+  const startGeneratedAudio = () => {
+    if (audioCtx) return;
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    gain = audioCtx.createGain();
+    gain.gain.value = 0.06;
+    gain.connect(audioCtx.destination);
+
+    osc = audioCtx.createOscillator();
+    osc.type = 'sine';
+    osc.frequency.value = 220;
+    osc.connect(gain);
+    osc.start();
+
+    // Cambios suaves de frecuencia para una melodia minimal
+    const melodyInterval = setInterval(() => {
+      if (!audioCtx) { clearInterval(melodyInterval); return; }
+      const base = 220;
+      const steps = [0, 3, 5, 7, 10];
+      const step = steps[Math.floor(Math.random() * steps.length)];
+      const freq = base * Math.pow(2, step / 12);
+      osc.frequency.setTargetAtTime(freq, audioCtx.currentTime, 0.08);
+    }, 420);
+  };
+
+  if (audioEl) {
+    audioEl.addEventListener('error', startGeneratedAudio);
+    const tryPlay = () => {
+      audioEl.play().catch(() => startGeneratedAudio());
+      document.removeEventListener('click', tryPlay);
+    };
+    document.addEventListener('click', tryPlay);
+  } else {
+    document.addEventListener('click', startGeneratedAudio, { once: true });
+  }
+}
+
+window.addEventListener('load', () => {
+  game.init();
+  const resetBtn = document.getElementById('reset-button');
+  if (resetBtn) resetBtn.addEventListener('click', resetGame);
+  initBackgroundAudioFallback();
+});
