@@ -1,6 +1,17 @@
+const bgmusic = document.getElementById('background-music');
 const gameGrid = document.getElementById('game-grid');
 const movesLeftEl = document.getElementById('moves-left');
 const levelEl = document.getElementById('level');
+
+bgmusic.volume = 0.06; // Volumen inicial bajo
+bgmusic.loop = true; // Repetir música de fondo
+bgmusic.play().catch(() => {
+  // Manejar error de reproducción automática
+});
+bgmusic.addEventListener('ended', () => {
+  bgmusic.currentTime = 0;
+  bgmusic.play();
+});
 
 const MAX_LEVEL = 50;
 const STORAGE_KEY = 'game-progress';
