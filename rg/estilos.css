@@ -28,10 +28,6 @@ body {
   line-height: 1.6;
 
 }
-link {
-  text-decoration: none;
-  color: red;
-}
 li {
   text-decoration: none;
   color: var(--color-text-light);
@@ -41,26 +37,7 @@ body.dark-mode li {
   color: var(--color-text-dark);
   list-style: none;
 }
-#div-espdser {
-  text-align: center;
-  color: var(--color-text-light);
-}
-#div-espdser a {
-  color: var(--color-accent);
-  text-decoration: none;
-}
-#div-espdser a:hover {
-  text-decoration: underline;
-}
-#div-espdser body.dark-mode {
-  color: var(--color-text-dark);
-}
-#div-espdser body.dark-mode a {
-  color: var(--color-accent-dark);
-}
-#div-espdser body.dark-mode a:hover {
-  text-decoration: underline;
-}
+/* Removed unused #div-espdser styles */
 
 .contenedor-generico {
   width: 60%;
@@ -230,12 +207,7 @@ body.dark-mode .servicio-card h3 {
   color: var(--color-accent-dark);
 }
 
-.precio {
-  font-weight: bold;
-  color: var(--color-secondary);
-  font-size: 1.2em;
-  margin-top: 10px;
-}
+/* .precio removed (no longer used) */
 
 /* estilos para resultados de búsqueda */
 #search-results {
@@ -264,61 +236,4 @@ body.dark-mode #search-results { background: rgba(20,20,20,0.9); }
 body.dark-mode #search-results .sr-item { color: #9fd7ff; }
 body.dark-mode #search-results .sr-no { color: #bbb; }
 
-.table-container {
-  width: 70%;
-  margin: 0 auto;
-  align-items: center;
-  justify-content: center;
-  text-align: justify;
-
-}
-
-table {
-  width: 70%;
-  border-collapse: collapse;
-  font-family: sans-serif;
-  margin: 20px auto;
-  background-color: rgb(rgba(73, 62, 62, 0.308), green, blue);
-  padding: 10px;
-}
-body.dark-mode table {
-  background-color: rgba(50, 50, 50, 0.5);
-}
-th, td {
-  border: 1px solid rgb(221, 221, 221);
-  padding: 8px;
-  text-align: left;
-}
-body.dark-mode th, body.dark-mode td {
-  border: 1px solid rgb(100, 100, 100);
-}
-th {
-  background-color: rgb(242, 242, 242);
-  color: rgb(51, 51, 51);
-  font-weight: bold;
-}
-body.dark-mode th {
-  background-color: rgb(70, 70, 70);
-  color: rgb(220, 220, 220);
-}
-tbody tr:nth-child(even) {
-  background-color: rgb(249, 249, 249);
-
-}
-body.dark-mode tbody tr:nth-child(even) {
-  background-color: rgb(60, 60, 60);
-}
-tbody tr:hover {
-  background-color: rgb(235, 235, 235);
-}
-body.dark-mode tbody tr:hover {
-  background-color: rgb(80, 80, 80);
-}
-caption {
-  padding: 10px;
-  font-size: 1.2em;
-  font-weight: bold;
-}
-body.dark-mode caption {
-  color: rgb(220, 220, 220);
-}
+/* Removed table styles (no tables found in project) */
