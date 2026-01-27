@@ -89,34 +89,11 @@
     <h2 id="advertencia">advertencia: asegurese de entender la totalidad del servicio, puede verificar cosas en <a
             href="https://LEGNA4444.github.io/PYCLEG/rg/especificacionesdelservicio.html">terminos</a></h2>
 
-<div id="simulador">
-  <input type="number" id="capital" placeholder="Capital Inicial">
-  <input type="number" id="tasa" placeholder="Tasa Anual %">
-  <input type="number" id="años" placeholder="Años">
-  <button onclick="calcular()">Calcular</button>
-  <p id="resultado"></p>
-</div>
- 
-
     <footer>
         <p>&copy; Creado e idealizado por:
             LEGNAR.</p>
     </footer>
     <script src="https://LEGNA4444.github.io/PYCLEG/rg/script-global.js">
-function calcular() {
-  const p = parseFloat(document.getElementById('capital').value);
-  const r = parseFloat(document.getElementById('tasa').value) / 100;
-  const n = parseInt(document.getElementById('años').value);
-
-  if (isNaN(p) || isNaN(r) || isNaN(n)) return;
-
-  // Fórmula: Capital * (1 + tasa)^años
-  const montoFinal = p * Math.pow((1 + r), n);
-  
-  document.getElementById('resultado').innerText = 
-    `Total: $${montoFinal.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
-}
- 
 </script>
 </body>
 
