@@ -102,7 +102,22 @@
         <p>&copy; Creado e idealizado por:
             LEGNAR.</p>
     </footer>
-    <script src="https://LEGNA4444.github.io/PYCLEG/rg/script-global.js"></script>
+    <script src="https://LEGNA4444.github.io/PYCLEG/rg/script-global.js">
+function calcular() {
+  const p = parseFloat(document.getElementById('capital').value);
+  const r = parseFloat(document.getElementById('tasa').value) / 100;
+  const n = parseInt(document.getElementById('años').value);
+
+  if (isNaN(p) || isNaN(r) || isNaN(n)) return;
+
+  // Fórmula: Capital * (1 + tasa)^años
+  const montoFinal = p * Math.pow((1 + r), n);
+  
+  document.getElementById('resultado').innerText = 
+    `Total: $${montoFinal.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+}
+ 
+</script>
 </body>
 
 </html>
