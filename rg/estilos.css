@@ -28,6 +28,51 @@ body {
   line-height: 1.6;
 
 }
+
+#simulador {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 12px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+#resultado {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e293b;
+  text-align: center;
+}
+
+
 li {
   text-decoration: none;
   color: var(--color-text-light);
