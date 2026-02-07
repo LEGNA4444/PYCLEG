@@ -238,3 +238,26 @@ body.dark-mode #search-results .sr-item { color: #9fd7ff; }
 body.dark-mode #search-results .sr-no { color: #bbb; }
 
 /* Removed table styles (no tables found in project) */
+
+#sr {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255,255,255,0.95);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1001;
+}
+body.dark-mode #sr { background: rgba(0, 0, 0, 0.95); }
+#sr h2 {
+  margin-top: 0;
+  color: var(--color-accent);
+}
+body.dark-mode #sr h2 { color: var(--color-accent-dark); }
+#sr p {
+  color: var(--color-text-light);
+}
+body.dark-mode #sr p { color: var(--color-text-dark); }
