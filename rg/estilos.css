@@ -58,7 +58,11 @@
   --font-size-2xl: 1.1em;
   --font-size-h1: 2em;
   --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  
+  --txt-inportante: color: rgb(0, 102, 204);
+  --txt-inportante-dark: color: rgb(47, 142, 231);
+  --n.-importante: color: rgb(102, 102, 102);
+  --n.-importante-dark: color: rgb(187, 187, 187);
+
   /* Transiciones */
   --transition-slow: 3.35s;
   --transition-fast: 0.35s;
