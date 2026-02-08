@@ -284,29 +284,27 @@ body.dark-mode button#toggle-dark {
   box-sizing: border-box;
   background-color: var(--color-text-light-input);
   color: var(--color-text-light);
-  transition: background-color var(--transition-slow) ease, color var(--transition-slow) ease, border var(--transition-slow) ease;
-  position: sticky;
-  top: var(--spacing-xl);
-  left: var(--spacing-xl);
-  z-index: var(--z-fixed);
+  transition: background-color var(--transition-fast) ease, color var(--transition-fast) ease, border var(--transition-fast) ease;
 }
 
 #search:focus {
   background-color: var(--color-text-light);
   color: var(--color-text-light-input);
   border: 2px solid var(--color-accent);
+  outline: none;
 }
 
 body.dark-mode #search {
-  background-color: var(--color-input-bg-dark);
-  color: var(--color-bg-light);
-  border: 2px solid var(--color-border-dark);
+  background-color: var(--color-text-light-input);
+  color: var(--color-text-light);
+  border: 2px solid var(--color-border);
 }
 
 body.dark-mode #search:focus {
-  background-color: var(--color-input-focus-bg);
+  background-color: var(--color-text-light);
   color: var(--color-text-light-input);
-  border: 2px solid var(--color-accent-dark);
+  border: 2px solid var(--color-accent);
+  outline: none;
 }
 
 /* Sección de servicios */
