@@ -284,7 +284,7 @@ body.dark-mode button#toggle-dark {
   width: 50%;
   box-sizing: border-box;
   background-color: #fff;
-  color: var(--color-text-light);
+  color: #00ff0d;
   transition: background-color var(--transition-time) ease, color var(--transition-time) ease, border var(--transition-time) ease;
   position: fixed;
   top: 20px;
