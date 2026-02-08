@@ -269,7 +269,7 @@ body.dark-mode button#toggle-dark {
   background-color: var(--color-text-light-input);
   color: var(--color-text-light);
   transition: background-color var(--transition-slow) ease, color var(--transition-slow) ease, border var(--transition-slow) ease;
-  position: fixed;
+  position: sticky;
   top: var(--spacing-xl);
   left: var(--spacing-xl);
   z-index: var(--z-fixed);
@@ -305,7 +305,7 @@ body.dark-mode #search:focus {
 .servicio-card {
   background: var(--color-card-bg-light);
   padding: var(--spacing-xl);
-  border-radius: 18 40px 40px 18px;
+  border-radius: var(--border-radius-lg);
   border-left: 4px solid var(--color-accent);
   text-align: left;
   transition: transform var(--transition-medium) ease, box-shadow var(--transition-medium) ease;
