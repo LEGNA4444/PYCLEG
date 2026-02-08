@@ -131,16 +131,20 @@ document.addEventListener('DOMContentLoaded', function () {
   
   // Inicializar simulador de precios (si existe el UI)
   (function(){
-    const SIM_KEY = 'simulator';
+    const SIM_KEY = 'simulator_v2';
     const totalEl = document.getElementById('sim-total');
     const saveBtn = document.getElementById('sim-save');
     const servicioCard = totalEl ? totalEl.closest('.servicio-card') : null;
-  
+
     if (!totalEl || !servicioCard) return;
-  
+
     const optionInputs = servicioCard.querySelectorAll('input[type="checkbox"][data-price]');
     const sectionsInput = servicioCard.querySelector('#sim-sections');
-  
+    const jsSelect = servicioCard.querySelector('#sim-js');
+    const cssSelect = servicioCard.querySelector('#sim-css');
+
+    const formatter = new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN' });
+
     function calcTotal(){
       let total = 0;
       // secciones
@@ -149,36 +153,46 @@ document.addEventListener('DOMContentLoaded', function () {
         const per = parseFloat(sectionsInput.dataset.pricePer) || 0;
         total += count * per;
       }
+      // JS y CSS
+      if (jsSelect) total += parseFloat(jsSelect.value) || 0;
+      if (cssSelect) total += parseFloat(cssSelect.value) || 0;
       // opciones
       optionInputs.forEach(o => { if (o.checked) total += parseFloat(o.dataset.price) || 0; });
-      totalEl.textContent = '$' + total.toFixed(2);
+
+      totalEl.textContent = formatter.format(total);
       servicioCard.dataset.currentTotal = total;
       return total;
     }
 
     if (sectionsInput) sectionsInput.addEventListener('input', calcTotal);
+    if (jsSelect) jsSelect.addEventListener('change', calcTotal);
+    if (cssSelect) cssSelect.addEventListener('change', calcTotal);
     optionInputs.forEach(o => o.addEventListener('change', calcTotal));
-  
+
     // Cargar simulación guardada
     try{
       const saved = localStorage.getItem(SIM_KEY);
       if (saved) {
         const obj = JSON.parse(saved);
-        if (obj.sections && sectionsInput) {
+        if (obj.sections !== undefined && sectionsInput) {
           sectionsInput.value = obj.sections;
         }
+        if (obj.js !== undefined && jsSelect) jsSelect.value = obj.js;
+        if (obj.css !== undefined && cssSelect) cssSelect.value = obj.css;
         if (obj.options && Array.isArray(obj.options)){
           optionInputs.forEach(o => o.checked = obj.options.includes(o.value));
         }
       }
     } catch(e) {}
-  
+
     calcTotal();
-  
+
     if (saveBtn) saveBtn.addEventListener('click', function(){
       const sections = sectionsInput ? parseInt(sectionsInput.value,10) || 0 : 0;
+      const js = jsSelect ? jsSelect.value : null;
+      const css = cssSelect ? cssSelect.value : null;
       const options = Array.from(optionInputs).filter(o => o.checked).map(o => o.value);
-      const data = { sections, options, total: servicioCard.dataset.currentTotal };
+      const data = { sections, js, css, options, total: servicioCard.dataset.currentTotal };
       try{
         localStorage.setItem(SIM_KEY, JSON.stringify(data));
         alert('Simulación guardada en el navegador.');
