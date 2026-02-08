@@ -58,27 +58,16 @@
   --font-size-2xl: 1.1em;
   --font-size-h1: 2em;
   --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --txt-inportante: rgb(165, 37, 37);
-  --txt-inportante-dark: rgb(255, 147, 85);
+  --txt-importante: rgb(165, 37, 37);
+  --txt-importante-dark: rgb(255, 147, 85);
   --num-importante: rgb(68, 3, 3);
   --num-importante-dark: rgb(128, 128, 128);
-
-  .TXTI {
-    color: var(--txt-inportante);
-    font-size: var(--font-size-2xl);
-    font-weight: bold;
-  }
-
-  .NI {
-    color: var(--num-inportante);
-    font-size: var(--font-size-2xl);
-    font-weight: bold;
-  }
 
   /* Transiciones */
   --transition-slow: 3.35s;
   --transition-fast: 0.35s;
   --transition-medium: 0.2s;
+  --transition-time: 0.2s;
   
   /* Sombras */
   --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -92,6 +81,27 @@
   /* Z-index */
   --z-modal: 1001;
   --z-fixed: 1000;
+}
+
+/* Clases de estilos especiales */
+.TXTI {
+  color: var(--txt-importante);
+  font-size: var(--font-size-2xl);
+  font-weight: bold;
+}
+
+body.dark-mode .TXTI {
+  color: var(--txt-importante-dark);
+}
+
+.NI {
+  color: var(--num-importante);
+  font-size: var(--font-size-2xl);
+  font-weight: bold;
+}
+
+body.dark-mode .NI {
+  color: var(--num-importante-dark);
 }
 
 
@@ -286,7 +296,7 @@ body.dark-mode button#toggle-dark {
   background-color: #fff;
   color: #00ff0d;
   transition: background-color var(--transition-time) ease, color var(--transition-time) ease, border var(--transition-time) ease;
-  
+  position: static;
   top: 20px;
   left: 20px;
   z-index: 1000;
