@@ -60,8 +60,8 @@
   --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --txt-inportante: color: rgb(0, 102, 204);
   --txt-inportante-dark: color: rgb(47, 142, 231);
-  --n.-importante: color: rgb(102, 102, 102);
-  --n.-importante-dark: color: rgb(187, 187, 187);
+  --num-importante: color: rgb(102, 102, 102);
+  --num-importante-dark: color: rgb(187, 187, 187);
 
   /* Transiciones */
   --transition-slow: 3.35s;
