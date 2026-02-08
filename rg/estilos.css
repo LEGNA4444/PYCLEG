@@ -63,6 +63,18 @@
   --num-importante: rgb(68, 3, 3);
   --num-importante-dark: rgb(128, 128, 128);
 
+  .TXTI {
+    color: var(--txt-inportante);
+    font-size: var(--font-size-2xl);
+    font-weight: bold;
+  }
+
+  .NI {
+    color: var(--num-inportante);
+    font-size: var(--font-size-2xl);
+    font-weight: bold;
+  }
+
   /* Transiciones */
   --transition-slow: 3.35s;
   --transition-fast: 0.35s;
