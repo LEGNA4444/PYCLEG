@@ -85,13 +85,13 @@
 
 /* Clases de estilos especiales */
 .TXTI {
-    color: var(--txt-importante);
+    color: var(--txt-importante-dark);
     font-size: var(--font-size-2xl);
     font-weight: bold;
 }
 
 body.dark-mode .TXTI {
-    color: var(--txt-importante-dark);
+    color: var(--txt-importante);
 }
 
 .NI {
