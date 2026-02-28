@@ -325,7 +325,7 @@ body.dark-mode #search:focus {
 
 /* Sección de servicios */
 .servicios-container {
-    max-width: 1400px auto;
+    width: 1400px auto;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
