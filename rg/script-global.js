@@ -1,7 +1,19 @@
-// script-global.js
-// Lógica para modo oscuro con persistencia en localStorage
+/**
+ * LEGNAR Portfolio - Script Principal
+ * Versión 2.0 - Mejorado y Centralizado
+ *
+ * Módulos:
+ * - Modo oscuro (dark mode)
+ * - Sistema de búsqueda
+ * - Simulador de precios
+ * - Validación de formulario de contacto
+ */
 
 document.addEventListener("DOMContentLoaded", function () {
+    /* ========================================
+       MÓDULO 1: Modo Oscuro
+       Gestiona el tema claro/oscuro con persistencia
+       ======================================== */
     const toggleBtn = document.getElementById("toggle-dark");
     const storageKey = "darkMode";
 
@@ -55,12 +67,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    /* -----------------------
-     Sistema de búsqueda
-     - Usa una lista `projects` con { title, url, tags }
-     - Filtra en tiempo real por título/tags
-     - Click en resultado o Enter navega al primer resultado
-  ------------------------*/
+    /* ========================================
+       MÓDULO 2: Sistema de Búsqueda
+       Filtrado en tiempo real de proyectos
+       ======================================== */
     const searchInput = document.getElementById("search");
     if (searchInput) {
         // Lista de proyectos: edítala según necesites
@@ -152,6 +162,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Inicializar simulador de precios (si existe el UI)
+    /* ========================================
+       MÓDULO 3: Simulador de Precios
+       Calcula total dinámico según selecciones
+       ======================================== */
     (function () {
         const SIM_KEY = "simulator_v2";
         const totalEl = document.getElementById("sim-total");
@@ -247,6 +261,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Lógica para el formulario de contacto usando Formspree
+/* ========================================
+   MÓDULO 4: Formulario de Contacto
+   Validación y envío via Formspree
+   ======================================== */
 (function () {
     const form = document.getElementById("form-contacto");
     const respuesta = document.getElementById("form-respuesta");

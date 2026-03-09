@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="j5sBQ521GuQnTmQM5skCXFGmzVMus3QWIuA5ID7eB5Y"/>
-    <title>LEGNAR — Desarrollo Web Profesional | Portafolios, Landing Pages</title>
+    <meta name="google-site-verification" content="j5sBQ521GuQnTmQM5skCXFGmzVMus3QWIuA5ID7eB5Y" />
+    <title>LEGNAR — Desarrollo Web| Portafolios, Landing Pages</title>
     <link rel="stylesheet" href="https://LEGNA4444.github.io/PYCLEG/rg/estilos.css">
     <!--  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/308/308571.png"> -->
     <link rel="icon" type="image/png" href="https://LEGNA4444.github.io/PYCLEG/icon.png" alt="Icono de LEGNAR">
@@ -20,19 +20,14 @@
         content="Creo sitios web rápidos y económicos. Especializado en portafolios y landing pages.">
     <meta property="og:url" content="https://LEGNA4444.github.io/PYCLEG/">
     <meta property="og:type" content="website">
-    <!--
-            Modo oscuro: el botón con id="toggle-dark" activa/desactiva el tema añadiendo la
-            clase `dark-mode` al elemento <body>. El comportamiento (persistencia en
-            localStorage, detección de la preferencia del sistema y atajo de teclado 'D')
-            está implementado en `script-global.js`.
-        -->
+    <!-- Modo oscuro: el botón con id="toggle-dark" activa/desactiva el tema oscuro -->
 </head>
 
 <body>
     <header>
         <h1>Índice — LEGNAR</h1>
-        <button id="toggle-dark">Modo oscuro</button>
-        <!---menú interactivo con CSS-->
+        <button id="toggle-dark">Modo Oscuro</button>
+        <!---Menú interactivo -->
         <nav class="menu">
             <ul>
                 <li class="menu-desplegable">
@@ -50,21 +45,21 @@
     </header>
 
     <main>
-        <h2 style="margin-top: 60px;">Busca mis proyectos</h2>
+        <h2>Busca mis proyectos</h2>
         <input type="text" id="search" placeholder="Buscar por nombre o etiqueta...">
 
-        <section class="servicios-container" style="margin-top: 60px;">
+        <section class="servicios-container">
             <div class="servicio-card">
                 <h3>Simulador de precios</h3>
                 <p>Selecciona las características que quieres en tu sitio; el total se actualiza en tiempo real.</p>
 
-                <fieldset style="margin-top:12px; text-align:left;">
+                <fieldset>
                     <legend>Características</legend>
                     <label>Secciones principales: <input id="sim-sections" type="number" min="0" max="60" value="3"
-                            data-price-per="100" style="width:60px; margin-left:8px;"></label><br>
+                            data-price-per="100"></label><br>
 
                     <label for="sim-js">Complejidad de JavaScript:</label>
-                    <select id="sim-js" style="margin-left:8px;">
+                    <select id="sim-js">
                         <option value="0">Sin .js (0 MXN)</option>
                         <option value="1000">JS básico (1,000 MXN)</option>
                         <option value="2500">JS normal (2,500 MXN)</option>
@@ -73,7 +68,7 @@
                     <br>
 
                     <label for="sim-css">Complejidad de CSS:</label>
-                    <select id="sim-css" style="margin-left:8px;">
+                    <select id="sim-css">
                         <option value="500">CSS básico / no especificado (500 MXN)</option>
                         <option value="1000">CSS normal (1,000 MXN)</option>
                         <option value="6000">CSS complejo (6,000 MXN)</option>
@@ -91,21 +86,20 @@
                         pago</label><br>
                 </fieldset>
 
-                <div style="margin-top:12px; text-align:left;">
+                <div>
                     <strong>Total estimado (MXN): </strong><span id="sim-total" class="NI">$0.00</span>
                 </div>
 
-                <div style="margin-top:12px; text-align:left;">
-                    <button id="sim-save" style="padding:8px 12px; border-radius:6px;">Guardar simulación</button>
+                <div>
+                    <button id="sim-save">Guardar simulación</button>
                 </div>
-                <p style="margin-top:8px; font-size:0.9em; color:#666;">La simulación se guarda en tu navegador.</p>
+                <p>La simulación se guarda en tu navegador.</p>
             </div>
         </section>
 
-        <div style="text-align: center; margin-top: 40px;">
-            <a href="https://LEGNA4444.github.io/PYCLEG/rg/contacto.html"
-                style="display: inline-block; background-color: var(--color-accent); color: white; padding: 12px 30px; border-radius: 6px; text-decoration: none; font-weight: bold;">Solicita
-                una cotización gratis</a>
+        <div>
+            <a href="https://LEGNA4444.github.io/PYCLEG/rg/contacto.html" class="btn-quote">Solicita una cotización
+                gratis</a>
         </div>
     </main>
 
