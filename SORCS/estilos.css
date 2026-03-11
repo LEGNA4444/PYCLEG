@@ -341,7 +341,7 @@ body.dark-mode #search:focus {
     background: var(--color-card-bg-light);
     padding: var(--spacing-xl);
     border-radius: var(--border-radius-lg);
-    border-left: 4px solid var(--color-accent);
+    border-left: 4px solid, auto;
     text-align: left;
     transition:
         transform var(--transition-medium) ease,
