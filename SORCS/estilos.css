@@ -38,9 +38,9 @@
     --color-input-focus-text: #9fd7ff;
 
     /* Espaciado */
-    --spacing-xs: 8px;
+    --spacing-xs: 0.5rem;
     --spacing-sm: 10px;
-    --spacing-md: 12px;
+    --spacing-md: 0.75;
     --spacing-lg: 15px;
     --spacing-xl: 20px;
     --spacing-2xl: 30px;
