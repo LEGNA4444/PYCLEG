@@ -40,7 +40,7 @@
     /* Espaciado */
     --spacing-xs: 0.5rem;
     --spacing-sm: 10px;
-    --spacing-md: 0.75;
+    --spacing-md: 0.75rem;
     --spacing-lg: 15px;
     --spacing-xl: 20px;
     --spacing-2xl: 30px;
@@ -341,7 +341,7 @@ body.dark-mode #search:focus {
     background: var(--color-card-bg-light);
     padding: var(--spacing-xl);
     border-radius: var(--border-radius-lg);
-    border-left: 4px solid, auto;
+    border-left: 4px solid var(--color-accent);
     text-align: left;
     transition:
         transform var(--transition-medium) ease,
@@ -752,6 +752,7 @@ h1.game-title {
     background-color: #15ff00;
     color: rgb(0, 68, 255);
 }
+
 #art813 {
-    aligan-items: Center;
+    align-items: center;
 }
