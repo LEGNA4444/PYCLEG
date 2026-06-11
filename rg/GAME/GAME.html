@@ -9,21 +9,29 @@
 </head>
 
 <body class="game-page">
-    <h1 class="game-title">Juego del Laberinto Matemático</h1>
-    <div id="game-info">
+    <header>
+        <!-- El botón de modo oscuro es vital para que el script global no haga un return prematuro -->
+        <button id="toggle-dark" style="display:none;">Modo Oscuro</button>
+    </header>
 
-        <p id="nivel">Nivel: <span id="level">1</span></p>
-    </div>
-    <div id="game-grid"></div>
+    <main role="main">
+        <h1 class="game-title">Juego del Laberinto Matemático</h1>
+        
+        <div id="game-info">
+            <p>Nivel: <span id="level">1</span></p>
+        </div>
 
-    <p id="pasos">Pasos: <span id="moves-left"></span></p>
+        <div id="game-grid"></div>
 
-    <button id="reset-button">Reiniciar juego</button>
+        <p>Pasos restantes: <span id="moves-left">5</span></p>
 
-    <audio id="background-music" loop>
-        <source src="https://LEGNA4444.github.io/PYCLEG/rg/GAME/RP_LP_3.mp3" type="audio/mpeg">
-        Tu navegador no soporta el elemento de audio.
-    </audio>
+        <button id="reset-button">Reiniciar juego</button>
+
+        <audio id="background-music" loop>
+            <source src="https://LEGNA4444.github.io/PYCLEG/rg/GAME/RP_LP_3.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+    </main>
 
     <script src="../../SORCS/script-global.js"></script>
 </body>
