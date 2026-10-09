@@ -757,4 +757,8 @@ h1.game-title {
     align-items: center;
 }
 
-.pieimg 
+.pieimg {
+    width: 100px;
+    height: auto;
+    margin-top: 10px;
+}
