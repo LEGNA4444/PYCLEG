@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 url: "https://LEGNA4444.github.io/PYCLEG/404.html",
                 tags: ["nalp", "proyecto"],
             },
-            
+            {}
             {
                 title: "INFY5",
                 url: "https://LEGNA4444.github.io/PYCLEG/404.html",
