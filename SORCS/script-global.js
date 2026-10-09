@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             {
                 title: "legnar",
-                url: "https://LEGNA4444.GITHUB.IO.io/PYCLEG/"
+                url: "https://LEGNA4444.GITHUB.IO.io/PYCLEG/rg "
             },
             {
                 title: "INFY5",
