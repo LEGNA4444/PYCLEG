@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             {
                 title: "legnar",
-                url: "https://LEGNA4444.github"
+                url: "https://LEGNA4444.GITHUB.IO.io"
             },
             {
                 title: "INFY5",
