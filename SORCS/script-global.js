@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 tags: ["legnar", "información personal"],
                 
             },
-            //
+            // Agrega más proyectos aquí según sea necesario
             {
                 title: "INFY5",
                 url: "https://LEGNA4444.github.io/PYCLEG/404.html",
