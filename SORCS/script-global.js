@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 tags: ["nalp", "proyecto"],
             },
             {
-                title: ""
+                title: "in"
             },
             {
                 title: "INFY5",
