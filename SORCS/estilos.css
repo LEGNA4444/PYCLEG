@@ -693,7 +693,7 @@ h1.game-title {
     font-size: 4vmin;
     font-weight: bold;
     cursor: pointer;
-    transition:background-color 0.2s ease;
+    transition:background-clor 0.2s ease;
     overflow: hidden;
 }
 
